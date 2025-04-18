@@ -263,6 +263,9 @@ body {
 /* Sections */
 section {
     padding: 5rem 2rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 section h2 {
@@ -380,11 +383,22 @@ section h2::after {
     box-shadow: var(--shadow-hover);
 }
 
+.testimonial-content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .testimonial-header {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 .testimonial-image {
@@ -394,14 +408,14 @@ section h2::after {
 .placeholder-image {
     width: 60px;
     height: 60px;
-    background: #e5e7eb;
+    background: var(--section-bg);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #6b7280;
+    color: var(--text-color);
     border: 3px solid var(--primary-color);
 }
 
@@ -650,15 +664,45 @@ footer {
 
     section {
         padding: 3rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        width: 100%;
+        max-width: 100%;
     }
 
     .project-card {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .testimonial-content {
+        padding: 1.5rem;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .testimonial-image {
+        margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+        padding-top: 0.5rem;
+    }
+
+    .testimonial-text p {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
     }
 
     .placeholder-image {
@@ -692,6 +736,27 @@ footer {
     .profile-image {
         width: 120px;
         height: 120px;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .testimonial-content {
+        padding: 1.25rem;
+    }
+
+    .testimonial-text p {
+        padding-left: 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .testimonial-info h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-info p {
+        font-size: 0.85rem;
     }
 }
 
@@ -1274,10 +1339,6 @@ select option[value=""] {
 }
 
 /* Enhanced Testimonials */
-.testimonial-content {
-    position: relative;
-}
-
 .testimonial-content::before {
     content: '"';
     position: absolute;
