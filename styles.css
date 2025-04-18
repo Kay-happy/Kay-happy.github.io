@@ -356,17 +356,17 @@ section h2::after {
 /* Projects Section */
 .projects {
     background: var(--section-bg);
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
     width: 100%;
     overflow: hidden;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr;  /* Changed to single column */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
-    max-width: 800px;  /* Reduced max-width for better readability */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -683,6 +683,7 @@ footer {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 0 0.5rem;
     }
@@ -766,12 +767,9 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
